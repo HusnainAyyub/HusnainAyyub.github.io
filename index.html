@@ -6,71 +6,192 @@
 <title>Husnain Ayyub — AI/ML Engineer | Python Backend Developer</title>
 <meta name="description" content="Portfolio of Husnain Ayyub: AI/ML Engineer, Python Backend Developer, Generative AI Enthusiast. BS Computer Science, Lahore Garrison University. Builder of LLM Sentinel AI.">
 <style>
-:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#388bfd;--accent2:#1f6feb}
-*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{padding:72px 0 48px;text-align:center;border-bottom:1px solid var(--border)}
-h1{font-size:3rem;letter-spacing:-1px}h1 span{color:var(--accent)}
-.tagline{font-size:1.2rem;color:var(--muted);margin:10px 0 6px}
-.meta{color:var(--muted);font-size:.95rem}
-.badges{margin:22px 0}.badge{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 14px;margin:3px;font-size:.85rem}
-.cta{display:inline-block;background:var(--accent2);color:#fff;padding:11px 26px;border-radius:8px;margin:8px 4px;font-weight:600}.cta.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
-section{padding:44px 0;border-bottom:1px solid var(--border)}h2{font-size:1.6rem;margin-bottom:20px}h2::before{content:"# ";color:var(--accent)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}.card h3{margin-bottom:6px}.card .stack{color:var(--accent);font-size:.82rem;margin-bottom:8px}.card p{color:var(--muted);font-size:.92rem}
-.skills h3{margin:16px 0 6px;color:var(--accent);font-size:1rem}.skills p{color:var(--muted)}
-.timeline{border-left:2px solid var(--accent2);margin-left:8px;padding-left:24px}.job{margin-bottom:28px;position:relative}.job::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
-.job h3{font-size:1.1rem}.job .when{color:var(--accent);font-size:.85rem}.job p,.job li{color:var(--muted);font-size:.94rem}.job ul{margin-left:18px}
-.open{background:#12233d;border:1px solid var(--accent2);border-radius:12px;padding:18px;text-align:center;font-weight:600}
-footer{padding:32px 0;text-align:center;color:var(--muted);font-size:.9rem}
+:root{--bg:#0d1117;--bg2:#010409;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--blue:#388bfd;--blue2:#1f6feb;--green:#3fb950;--purple:#bc8cff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,17,23,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-weight:800;font-size:1.25rem;color:var(--text)}.logo span{color:var(--blue)}
+.navlinks a{color:var(--muted);margin-left:22px;font-size:.93rem;font-weight:600}.navlinks a:hover{color:var(--blue)}
+@media(max-width:720px){.navlinks{display:none}}
+/* HERO */
+header{position:relative;padding:150px 0 80px;text-align:center;background:radial-gradient(900px 400px at 50% -60px,rgba(31,111,235,.28),transparent 65%)}
+#particles{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.hero-inner{position:relative}
+.avatar{width:118px;height:118px;border-radius:50%;border:3px solid var(--blue2);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:800;background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff;box-shadow:0 0 44px rgba(56,139,253,.45)}
+h1{font-size:3.2rem;letter-spacing:-1.5px;line-height:1.1}h1 span{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.typing{font-size:1.3rem;color:var(--blue);font-family:Consolas,monospace;min-height:2em;margin-top:12px}
+.typing::after{content:"|";animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
+.meta{color:var(--muted)}
+.cta{display:inline-block;background:var(--blue2);color:#fff;padding:12px 28px;border-radius:9px;margin:20px 5px 0;font-weight:700;transition:.2s}.cta:hover{background:var(--blue);transform:translateY(-2px);text-decoration:none}
+.cta.ghost{background:transparent;border:1px solid var(--blue);color:var(--blue)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:46px}
+.stat{background:rgba(22,27,34,.85);border:1px solid var(--border);border-radius:12px;padding:18px}
+.stat b{font-size:1.9rem;color:var(--blue);display:block}.stat span{color:var(--muted);font-size:.85rem}
+/* SECTIONS */
+section{padding:70px 0;border-top:1px solid var(--border)}
+.kicker{color:var(--blue);font-family:Consolas,monospace;font-size:.9rem;text-transform:uppercase;letter-spacing:2px}
+h2{font-size:2rem;margin:6px 0 26px;letter-spacing:-.5px}
+.lead{color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--blue);box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.card h3{margin-bottom:4px;font-size:1.13rem}.card .stack{color:var(--blue);font-size:.8rem;font-family:Consolas,monospace;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.93rem}.card .links{margin-top:13px;font-size:.88rem;font-weight:700}
+.tag{display:inline-block;border:1px solid var(--border);border-radius:16px;padding:2px 11px;font-size:.75rem;color:var(--muted);margin:8px 4px 0 0}
+.filters{margin-bottom:22px}.fbtn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 18px;border-radius:20px;cursor:pointer;font-weight:700;margin-right:7px;font-size:.88rem}
+.fbtn.active,.fbtn:hover{background:var(--blue2);color:#fff;border-color:var(--blue2)}
+/* SKILLS */
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:13px}
+.skill{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 8px;text-align:center;font-size:.85rem;font-weight:600;transition:.2s}
+.skill:hover{border-color:var(--blue);transform:translateY(-3px)}.skill img{width:42px;height:42px;display:block;margin:0 auto 8px}
+.bar-row{margin:13px 0}.bar-row label{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600}
+.bar{height:9px;background:#21262d;border-radius:6px;margin-top:5px;overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--blue2),var(--purple));transition:width 1.2s ease}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:34px}@media(max-width:760px){.cols2{grid-template-columns:1fr}}
+/* TIMELINE */
+.timeline{border-left:2px solid var(--blue2);margin-left:8px;padding-left:27px}
+.job{margin-bottom:32px;position:relative}.job::before{content:"";position:absolute;left:-34px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(56,139,253,.2)}
+.job h3{font-size:1.12rem}.job .when{color:var(--blue);font-size:.85rem;font-family:Consolas,monospace}.job p,.job li{color:var(--muted);font-size:.94rem}.job ul{margin-left:18px}
+/* MISC */
+.cred{display:flex;gap:15px;align-items:flex-start}.cred .ic{font-size:1.7rem;background:#12233d;border:1px solid var(--blue2);border-radius:11px;padding:8px 13px}
+.ghstats{text-align:center}.ghstats img{max-width:100%;border-radius:10px;margin:5px}
+.open{background:linear-gradient(90deg,#12233d,#1a1440);border:1px solid var(--blue2);border-radius:14px;padding:24px;text-align:center}
+.open b{font-size:1.15rem}
+.contact{text-align:center}.contact p{color:var(--muted)}
+footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+#topbtn{position:fixed;right:22px;bottom:22px;background:var(--blue2);color:#fff;border:none;width:46px;height:46px;border-radius:50%;font-size:1.15rem;cursor:pointer;display:none;box-shadow:0 8px 20px rgba(0,0,0,.5)}
 </style>
 </head>
 <body>
-<header><div class="wrap">
+<nav><div class="wrap"><a class="logo" href="#top">Husnain<span>.dev</span></a>
+<div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div></div></nav>
+
+<header id="top"><canvas id="particles"></canvas><div class="wrap hero-inner">
+<div class="avatar">HA</div>
 <h1>Husnain <span>Ayyub</span></h1>
-<p class="tagline">AI/ML Engineer | Python Backend Developer | Generative AI Enthusiast</p>
+<div class="typing" id="typing"></div>
 <p class="meta">Lahore, Pakistan &nbsp;•&nbsp; BS Computer Science, Lahore Garrison University (7th Semester)</p>
-<div class="badges"><span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">Scikit-learn</span><span class="badge">Generative AI</span><span class="badge">Agentic AI</span><span class="badge">Selenium / QA</span><span class="badge">C++</span><span class="badge">SQL</span></div>
-<a class="cta" href="https://github.com/HusnainAyyub">GitHub</a>
-<a class="cta ghost" href="https://www.linkedin.com/in/husnain-ayyub-99a419385">LinkedIn</a>
-<a class="cta ghost" href="mailto:husnainayyub05@gmail.com">Email Me</a>
-<p style="margin-top:20px" class="open">Open to internships, freelance projects, and remote opportunities</p>
-</div></header>
+<a class="cta" href="#projects">View My Projects</a>
+<a class="cta ghost" href="https://github.com/HusnainAyyub">GitHub Profile</a>
+<a class="cta ghost" href="CV.md">Download CV</a>
+<div class="stats">
+<div class="stat"><b data-count="6">0</b><span>Projects Built</span></div>
+<div class="stat"><b data-count="3">0</b><span>Internships & Roles</span></div>
+<div class="stat"><b data-count="2000">0</b><span>FYP Prompts Dataset Target</span></div>
+<div class="stat"><b data-count="500">0</b><span>Concurrent Users Load-Tested</span></div>
+<div class="stat"><b data-count="18">0</b><span>KM Marathon Run</span></div>
+</div></div></header>
 
-<section><div class="wrap"><h2>About</h2>
-<p style="color:var(--muted)">Computer Science undergraduate with a strong analytical foundation and a dedicated focus on Artificial Intelligence and Python development. Passionate about agentic AI workflows and machine learning concepts. Experienced in building automation logic, tackling complex systems programming challenges, and collaborating in competitive and professional environments. Currently building <strong style="color:var(--text)">LLM Sentinel AI</strong>, my Final Year Project on detection of LLM jailbreak and prompt injection attacks.</p>
+<section id="about"><div class="wrap reveal"><p class="kicker">About Me</p><h2>Building intelligent systems</h2>
+<p class="lead">Computer Science undergraduate with a strong analytical foundation and a dedicated focus on Artificial Intelligence and Python development. Passionate about agentic AI workflows and machine learning concepts. Experienced in building automation logic, tackling complex systems programming challenges, and collaborating in competitive and professional environments.</p>
+<p class="lead" style="margin-top:14px">My Final Year Project, <strong style="color:var(--text)">LLM Sentinel AI</strong>, detects LLM jailbreak and prompt injection attacks using a rule-based engine combined with a Scikit-learn classifier. I lead the AI/ML work: dataset curation, rule generation and classifier implementation.</p>
 </div></section>
 
-<section><div class="wrap"><h2>Experience</h2><div class="timeline">
-<div class="job"><h3>Intern — TMC Private Limited</h3><p class="when">13 July 2026 – 21 August 2026 • 6 weeks • Lahore</p><p>Successfully completed a six-week internship. Performance described as commendable in the completion letter from the Head of HR, with valued contributions, a strong work ethic and a positive attitude to learning and teamwork.</p></div>
-<div class="job"><h3>Public Relations Intern — Inter Services Public Relations (ISPR)</h3><p class="when">2025 • Lahore</p><ul><li>Assisted in strategic content development and defense communication projects.</li><li>Analyzed media data and contributed to institutional reporting workflows.</li></ul></div>
-<div class="job"><h3>Part-Time Manager — Prestige Elite Chauffeurs Ltd.</h3><p class="when">Part-time</p></div>
-</div></div></section>
-
-<section><div class="wrap"><h2>Projects</h2><div class="grid">
-<div class="card"><h3>LLM Sentinel AI (FYP)</h3><p class="stack">Python • FastAPI • Scikit-learn • Pandas</p><p>AI-powered detection and security assessment of LLM jailbreak and prompt injection attacks. My role: dataset curation (2,000 prompts, 4 categories), rule generation, and classifier implementation, producing a risk score and category for each prompt.</p></div>
-<div class="card"><h3>Prompt Injection Classifier</h3><p class="stack">Python • TF-IDF • Logistic Regression</p><p>Text classifier separating benign, jailbreak, direct injection and indirect injection prompts.</p></div>
-<div class="card"><h3>DemoBlaze STQA Automation Portfolio</h3><p class="stack">Python • Selenium • Locust • Postman • May 2026</p><p>Automated UI tests with Selenium and the Page Object Model, load testing for 500 concurrent users with Locust, and API validation with Postman and Newman CLI.</p></div>
-<div class="card"><h3>Cyber Warfare System Simulation</h3><p class="stack">C • Linux • POSIX • Dec 2025</p><p>Real-time combat between autonomous processes, using POSIX Shared Memory and Semaphores to synchronise IPC and prevent race conditions.</p></div>
-<div class="card"><h3>Smart Airport Network Management</h3><p class="stack">Cisco Packet Tracer • OSPF • VLAN • May 2026</p><p>Multi-layered airport network simulation with VTP, OSPF dynamic routing, secure VLANs and central DHCP pools.</p></div>
-<div class="card"><h3>Web Prototyping</h3><p class="stack">HTML • CSS • JavaScript</p><p>Custom website prototypes developed for local businesses, plus full-stack prototyping and implementation work.</p></div>
-</div></div></section>
-
-<section><div class="wrap skills"><h2>Skills</h2>
-<h3>Programming</h3><p>Python, C++, C, SQL, HTML, CSS, JavaScript (Basic), MIPS Assembly, CUDA</p>
-<h3>AI & Machine Learning</h3><p>Scikit-learn, Pandas, NumPy, Generative AI, Agentic AI Workflows, FastAPI backend development</p>
-<h3>Testing & QA</h3><p>Selenium, Pytest, Locust (Load Testing), Postman, Newman</p>
-<h3>Networking & Systems</h3><p>Cisco Packet Tracer, VLAN, OSPF, DHCP, Subnetting, Linux Shared Memory, IPC, Semaphores</p>
-<h3>Tools</h3><p>Git, GitHub, VS Code, Canva, MS Office Suite</p>
+<section id="skills"><div class="wrap reveal"><p class="kicker">Tech Stack</p><h2>Skills & Tools</h2>
+<div class="skillgrid">
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">C++</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">C</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">FastAPI</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn">Scikit-learn</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">Pandas</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">NumPy</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium">Selenium</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">SQL</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">HTML5</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">JavaScript</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">Git</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">Linux</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">VS Code</div>
+</div>
+<div class="cols2" style="margin-top:30px">
+<div>
+<div class="bar-row"><label>Python & AI/ML <span>90%</span></label><div class="bar"><i data-w="90"></i></div></div>
+<div class="bar-row"><label>FastAPI / Backend <span>85%</span></label><div class="bar"><i data-w="85"></i></div></div>
+<div class="bar-row"><label>Testing & QA Automation <span>85%</span></label><div class="bar"><i data-w="85"></i></div></div>
+</div><div>
+<div class="bar-row"><label>C / C++ & Systems <span>80%</span></label><div class="bar"><i data-w="80"></i></div></div>
+<div class="bar-row"><label>Networking (OSPF / VLAN) <span>75%</span></label><div class="bar"><i data-w="75"></i></div></div>
+<div class="bar-row"><label>Web (HTML / CSS / JS) <span>75%</span></label><div class="bar"><i data-w="75"></i></div></div>
+</div></div>
+<p style="color:var(--muted);font-size:.9rem;margin-top:16px">Also: Postman, Newman, Locust, Pytest, Cisco Packet Tracer, DHCP, Subnetting, POSIX IPC & Semaphores, MIPS Assembly, CUDA, Canva, MS Office.</p>
 </div></section>
 
-<section><div class="wrap"><h2>Education & Achievements</h2><div class="grid">
-<div class="card"><h3>Lahore Garrison University</h3><p>BS Computer Science, 2023 – Present (7th Semester). Core: Data Structures, Algorithms, OS, DBMS, Web Technologies, AI.</p></div>
-<div class="card"><h3>Hackathons & Courses</h3><p>Participant, Innovista National Agentic AI Hackathon. Participant, Google Developers' Kaggle AI Agents Intensive Course. Hunarmand Punjab Python programme (March 2026).</p></div>
-<div class="card"><h3>Beyond Code</h3><p>Completed an 18-kilometre run at the CM Punjab National Marathon (April 2026). Creative Lead for Titans Arena university sports festival branding (Dec 2025). AI tools creator at @future.in60. Badminton player.</p></div>
+<section id="experience"><div class="wrap reveal"><p class="kicker">Career</p><h2>Experience</h2><div class="timeline">
+<div class="job"><h3>Intern — TMC Private Limited</h3><p class="when">13 JUL 2026 – 21 AUG 2026 • 6 WEEKS • LAHORE</p><p>Successfully completed a six-week internship. The completion letter from the Head of HR describes my performance as commendable, with a strong work ethic, positive attitude to learning, and valued contributions to the team.</p></div>
+<div class="job"><h3>Public Relations Intern — ISPR</h3><p class="when">2025 • LAHORE</p><ul><li>Assisted in strategic content development and defense communication projects.</li><li>Analyzed media data and contributed to institutional reporting workflows.</li><li>Enhanced cross-functional teamwork and organizational skills in a formal environment.</li></ul></div>
+<div class="job"><h3>Part-Time Manager — Prestige Elite Chauffeurs Ltd.</h3><p class="when">PART-TIME</p><p>Management role held alongside my degree studies.</p></div>
 </div></div></section>
 
-<footer><div class="wrap"><p>Let's build intelligent systems together!</p><p><a href="https://github.com/HusnainAyyub">GitHub</a> • <a href="https://www.linkedin.com/in/husnain-ayyub-99a419385">LinkedIn</a> • <a href="mailto:husnainayyub05@gmail.com">husnainayyub05@gmail.com</a></p></div></footer>
+<section id="projects"><div class="wrap reveal"><p class="kicker">Portfolio</p><h2>Featured Projects</h2>
+<div class="filters">
+<button class="fbtn active" data-f="all">All</button><button class="fbtn" data-f="ai">AI / ML</button><button class="fbtn" data-f="qa">Testing / QA</button><button class="fbtn" data-f="systems">Systems & Networks</button><button class="fbtn" data-f="web">Web & Design</button>
+</div>
+<div class="grid" id="projectGrid">
+<div class="card" data-cat="ai"><h3>LLM Sentinel AI (FYP)</h3><p class="stack">PYTHON • FASTAPI • SCIKIT-LEARN</p><p>Detection and security assessment of LLM jailbreak and prompt injection attacks. Rule-based engine plus ML classifier producing a risk score and category per prompt. Dataset: 2,000 prompts across benign, jailbreak, direct and indirect injection.</p><div><span class="tag">AI Security</span><span class="tag">Final Year Project</span></div><p class="links"><a href="https://github.com/HusnainAyyub/llm-sentinel-ai">View Code →</a></p></div>
+<div class="card" data-cat="ai"><h3>Prompt Injection Classifier</h3><p class="stack">PYTHON • TF-IDF • LOGISTIC REGRESSION</p><p>Standalone text classifier that separates benign, jailbreak, direct injection and indirect injection prompts, with training and prediction scripts.</p><div><span class="tag">NLP</span><span class="tag">Classification</span></div><p class="links"><a href="https://github.com/HusnainAyyub/prompt-injection-classifier">View Code →</a></p></div>
+<div class="card" data-cat="qa"><h3>DemoBlaze STQA Automation</h3><p class="stack">SELENIUM • LOCUST • POSTMAN • MAY 2026</p><p>Automated UI tests using Selenium with the Page Object Model, load testing for 500 concurrent users with Locust, and API schema validation with Postman and Newman CLI.</p><div><span class="tag">QA Automation</span><span class="tag">Load Testing</span></div></div>
+<div class="card" data-cat="systems"><h3>Cyber Warfare System Simulation</h3><p class="stack">C • LINUX • POSIX • DEC 2025</p><p>Real-time combat modelled between autonomous processes, using POSIX Shared Memory and Semaphores to synchronise inter-process communication and prevent race conditions.</p><div><span class="tag">Systems Programming</span><span class="tag">IPC</span></div></div>
+<div class="card" data-cat="systems"><h3>Smart Airport Network</h3><p class="stack">CISCO PACKET TRACER • OSPF • VLAN • MAY 2026</p><p>Multi-layered airport network simulation with VTP, OSPF dynamic routing, secure VLANs and central DHCP pools, including troubleshooting of logical connectivity faults.</p><div><span class="tag">Networking</span><span class="tag">Simulation</span></div></div>
+<div class="card" data-cat="web"><h3>Web Prototyping & Titans Arena Branding</h3><p class="stack">HTML • CSS • JS • CANVA</p><p>Custom website prototypes developed for local businesses, and unified visual branding (posters, brochures, ID cards) as Creative Lead for the Titans Arena university sports festival, Dec 2025.</p><div><span class="tag">Web</span><span class="tag">Design</span></div></div>
+</div></div></section>
+
+<section id="credentials"><div class="wrap reveal"><p class="kicker">Proof</p><h2>Credentials & Achievements</h2><div class="grid">
+<div class="card cred"><span class="ic">🎓</span><div><h3>TMC Internship Completion Letter</h3><p>TMC Private Limited, 4 September 2026. Six-week internship completed with commendable performance (Head of HR). Available on request.</p></div></div>
+<div class="card cred"><span class="ic">🏅</span><div><h3>ISPR Internship</h3><p>Public Relations Intern, Inter Services Public Relations, 2025, Lahore. Certificate available on request.</p></div></div>
+<div class="card cred"><span class="ic">🤖</span><div><h3>Agentic AI & Hackathons</h3><p>Participant, Innovista National Agentic AI Hackathon. Participant, Google Developers' Kaggle AI Agents Intensive Course.</p></div></div>
+<div class="card cred"><span class="ic">🐍</span><div><h3>Hunarmand Punjab — Python</h3><p>Completed Python Programming assignments through the Hunarmand Punjab initiative, March 2026.</p></div></div>
+<div class="card cred"><span class="ic">🏃</span><div><h3>CM Punjab National Marathon</h3><p>Completed an 18-kilometre straight run at the CM Punjab National Marathon, April 2026.</p></div></div>
+<div class="card cred"><span class="ic">🎓</span><div><h3>Education</h3><p>BS Computer Science, Lahore Garrison University (2023 – Present). FSc Pre-Engineering, Punjab College. Matric Science, First Nation School, Pattoki.</p></div></div>
+</div>
+<div class="ghstats" style="margin-top:34px">
+<img src="https://github-readme-stats.vercel.app/api?username=HusnainAyyub&show_icons=true&theme=github_dark&count_private=true" height="160" alt="GitHub stats">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HusnainAyyub&layout=compact&theme=github_dark" height="160" alt="Top languages">
+</div></div></section>
+
+<section id="contact"><div class="wrap reveal contact"><p class="kicker">Contact</p><h2>Let's build intelligent systems together</h2>
+<div class="open" style="margin-bottom:24px"><b>Open to internships, freelance projects, and remote opportunities</b></div>
+<p>Email: <a href="mailto:husnainayyub05@gmail.com">husnainayyub05@gmail.com</a></p>
+<p style="margin-top:8px"><a href="https://github.com/HusnainAyyub">GitHub</a> &nbsp;•&nbsp; <a href="https://www.linkedin.com/in/husnain-ayyub-99a419385">LinkedIn</a> &nbsp;•&nbsp; <a href="CV.md">Download CV</a></p>
+</div></section>
+
+<footer><div class="wrap"><p>© 2026 Husnain Ayyub — Lahore, Pakistan. Built with HTML, CSS and JavaScript, hosted on GitHub Pages.</p></div></footer>
+<button id="topbtn" title="Back to top">↑</button>
+<script>
+// Typing effect
+const roles=["AI/ML Engineer","Python Backend Developer","Generative AI Enthusiast","Agentic AI Explorer","FYP: LLM Sentinel AI"];
+let ri=0,ci=0,del=false;const tel=document.getElementById('typing');
+(function type(){const word=roles[ri];tel.textContent=word.slice(0,ci);
+if(!del){ci++;if(ci>word.length){del=true;return setTimeout(type,1400);}}
+else{ci--;if(ci===0){del=false;ri=(ri+1)%roles.length;}}
+setTimeout(type,del?38:78);})();
+// Particle canvas
+const cv=document.getElementById('particles'),ctx=cv.getContext('2d');let W,H,pts=[];
+function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;pts=Array.from({length:55},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45}));}
+size();addEventListener('resize',size);
+(function draw(){ctx.clearRect(0,0,W,H);ctx.fillStyle='rgba(56,139,253,.75)';
+pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,1.7,0,7);ctx.fill();});
+for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+if(d<110){ctx.strokeStyle='rgba(56,139,253,'+(0.14*(1-d/110))+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+requestAnimationFrame(draw);})();
+// Counters + bars + reveal on scroll
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+e.target.querySelectorAll('[data-count]').forEach(el=>{const target=+el.dataset.count;let n=0;const step=Math.max(1,Math.ceil(target/45));
+const t=setInterval(()=>{n+=step;if(n>=target){n=target;clearInterval(t);}el.textContent=n.toLocaleString();},28);});
+e.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%');});},{threshold:.18});
+document.querySelectorAll('.reveal,header').forEach(s=>io.observe(s));
+// Project filters
+document.querySelectorAll('.fbtn').forEach(btn=>btn.addEventListener('click',()=>{
+document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+const f=btn.dataset.f;document.querySelectorAll('#projectGrid .card').forEach(c=>{
+c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';});}));
+// Back to top
+const tb=document.getElementById('topbtn');addEventListener('scroll',()=>tb.style.display=scrollY>500?'block':'none');
+tb.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
 </body>
 </html>
